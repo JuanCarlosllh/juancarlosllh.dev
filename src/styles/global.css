@@ -1,7 +1,22 @@
 /** biome-ignore-all lint/suspicious/noUnknownAtRules: biome error */
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@theme {
+  --font-sans: 'Inter', 'sans-serif';
+  --font-serif: 'lora', 'sans-serif';
+}
+
+@theme {
+  --color-kiwi-bg: rgb(25, 25, 25); 
+  --color-kiwi-text: rgb(233 255 255);
+  --color-kiwi-green: rgb(133, 197, 126);
+}
 
 html {
 	overflow-y: scroll;
@@ -18,10 +33,10 @@ body {
 }
 
 body {
-	@apply font-sans antialiased;
+	@apply antialiased;
 	@apply flex flex-col;
-	@apply bg-stone-100 dark:bg-stone-900;
-	@apply text-black/50 dark:text-white/75;
+	@apply bg-stone-100 dark:bg-kiwi-bg;
+	@apply text-black/50 dark:text-kiwi-text;
 }
 
 header {
@@ -71,4 +86,8 @@ html #back-to-top {
 
 html.scrolled #back-to-top {
 	@apply opacity-100 pointer-events-auto;
+}
+
+strong {
+		@apply text-black/50 dark:text-kiwi-green;
 }
