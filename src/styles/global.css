@@ -1,10 +1,9 @@
 /** biome-ignore-all lint/suspicious/noUnknownAtRules: biome error */
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @plugin "@tailwindcss/typography";
 
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 
 @theme {
@@ -16,6 +15,9 @@
   --color-kiwi-bg: rgb(25, 25, 25); 
   --color-kiwi-text: rgb(233 255 255);
   --color-kiwi-green: rgb(133, 197, 126);
+  --color-kiwi-light-green: rgb(84, 161, 76);
+	--color-kiwi-blue: rgb(100, 149, 237);
+	--color-kiwi-purple: rgb(153, 95, 192);
 }
 
 html {
@@ -71,6 +73,7 @@ article {
 	}
 }
 
+
 .animate {
 	@apply opacity-0 translate-y-3;
 	@apply transition-all duration-700 ease-out;
@@ -89,6 +92,6 @@ html.scrolled #back-to-top {
 }
 
 strong {
-		@apply text-black/50 dark:text-kiwi-green;
+		@apply text-kiwi-light-green dark:text-kiwi-green;
 }
 
