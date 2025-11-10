@@ -5,7 +5,7 @@ dateStart: '02/01/2019'
 dateEnd: 'current'
 ---
 
-As Lead Developer at Lansweeper, I design and scale enterprise-grade data platforms that power real-time reporting, business intelligence, and AI-driven analytics for thousands of users globally.
+As Lead Developer at Lansweeper, I design and scale enterprise-grade data platforms that power real-time reporting, business intelligence, and AI-driven analytics.
 
 My responsibilities includes:
 
